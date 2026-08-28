@@ -50,7 +50,7 @@ export default function Home() {
       {/* Left Section */}
       <div className="w-full h-[38vh] md:h-auto md:w-[56%] bg-background flex flex-col justify-between p-4">
         <img
-          src="/design/nm/1a.png"
+          src="/design/NM/1a.png"
           alt="Hero"
           className="w-[58%] h-full object-cover absolute inset-0 transition-opacity duration-700 ease-in-out"
           style={{ 

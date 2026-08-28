@@ -177,11 +177,10 @@ export default function Design() {
   const currentNumber = imageIndex + 1;
   const isVideo = currentProject.videos?.includes(currentNumber) ?? false;
   const currentMedia = isVideo
-    ? `/design/${currentProject.folder}/${currentNumber}.mov`
-    : `/design/${currentProject.folder}/${currentNumber}.png` ||
-      `/design/${currentProject.folder}/${currentNumber}.mp4` ||
-      `/design/${currentProject.folder}/${currentNumber}.jpg` ||
-      `/design/${currentProject.folder}/${currentNumber}.webp`;
+    ? `/design/${currentProject.folder}/${currentNumber}.mp4`
+    : `/design/${currentProject.folder}/${currentNumber}.png`;
+
+  const fallbackImage = `/design/${currentProject.folder}/${currentNumber}.jpg`;
 
   const slideStyle = {
     transform:
@@ -250,10 +249,7 @@ export default function Design() {
                 fadeOut ? "opacity-0" : "opacity-100"
               }`}
               onError={(e) => {
-                (e.target as HTMLImageElement).src =
-                  `/design/${currentProject.folder}/${currentNumber}.jpg` ||
-                  `/design/${currentProject.folder}/${currentNumber}.png` ||
-                  `/design/${currentProject.folder}/${currentNumber}.webp`;
+                (e.target as HTMLImageElement).src = fallbackImage;
               }}
             />
           )}
