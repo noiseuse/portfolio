@@ -75,9 +75,10 @@ export default function Home() {
         </div>
 
         <div className={`
-          ${showBio && !designHover || isMobile ? 'opacity-100' : 'opacity-0'}
+          ${showBio && !designHover ? 'opacity-100' : 'opacity-0'}
           text-xs max-w-[70%] md:max-w-[18%] xl:max-w-[10%] top-4 md:top-[55%] text-right absolute left-[30%] mr-4 md:left-[20%] xl:left-[16%] font-light tracking-widest text-light transition-opacity duration-500 ease-in-out
-        `}>
+        `}
+        suppressHydrationWarning>
           <h1>
             I AM A DESIGNER, FILMMAKER AND  SOFTWARE ENGINEER BASED IN MONTREAL, QC. 
             I AM ON THE EDITORIAL BOARD OF NARROW MARGIN (THE QUARTERLY CINEMA MAGAZINE) AND MY BEST FRIEND IS <span className="text-accent" onMouseEnter={handleEnter}

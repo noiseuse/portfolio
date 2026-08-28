@@ -268,7 +268,7 @@ export default function Design() {
             onClick={() => setShowBio(!showBio)}
           />
           
-          <span className="break-words max-w-[200px] uppercase">
+          <span className="break-words max-w-[320px] md:max-w-[200px] uppercase">
             {currentProject.title} • {projectIndex + 1}/{projects.length}
           </span>
         </div>
@@ -310,7 +310,7 @@ export default function Design() {
               className="cursor-pointer h-4 w-4 bg-dark hidden text-lg lg:block flex-shrink-0 mt-1"
               onClick={() => setShowBio(!showBio)}
             />
-            <span className="break-words max-w-[200px] text-sm">
+            <span className="break-words max-w-[320px] md:max-w-[200px] text-sm">
               {currentProject.title}
             </span>
           </div>

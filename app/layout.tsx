@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lore Schwartz",
-  description: "Design and photography portfolio of Lore Schwartz, a Montréal based filmmaker, designer and software engineer.",
+  description: "Design and photography portfolio of Lore Schwartz, a Montréal based filmmaker and software engineer.",
   openGraph: {
     images: [
       {
