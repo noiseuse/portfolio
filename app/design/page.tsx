@@ -43,7 +43,7 @@ const projects: Project[] = [
     folder: "hsat",
     videos: [],
     description:
-      "HSAT is a London-based agricultural data science firm turning satellite imagery, weather data, and on-the-ground field intelligence into forecasts and reports relied on by farmers, local governments, and food and beverage companies.\n\nI spent a year as a full-time software engineer building the data pipelines powering these reports and leading a full redesign of the platform.",
+      "is a London-based agricultural data science firm turning satellite imagery, weather data, and on-the-ground field intelligence into forecasts and reports relied on by farmers, local governments, and food and beverage companies.\n\nI spent a year as a full-time software engineer building the data pipelines powering these reports and leading a full redesign of the platform.",
   },
   {
     title: "PETAL MAG",
@@ -176,10 +176,9 @@ export default function Design() {
   const currentProject = projects[projectIndex];
   const currentNumber = imageIndex + 1;
   const isVideo = currentProject.videos?.includes(currentNumber) ?? false;
-  const currentMedia = isVideo
-    ? `/design/${currentProject.folder}/${currentNumber}.mp4`
-    : `/design/${currentProject.folder}/${currentNumber}.png`;
-
+  const imageMedia = `/design/${currentProject.folder}/${currentNumber}.png`;
+  const mp4Media = `/design/${currentProject.folder}/${currentNumber}.mp4`;
+  const movMedia = `/design/${currentProject.folder}/${currentNumber}.mov`;
   const fallbackImage = `/design/${currentProject.folder}/${currentNumber}.jpg`;
 
   const slideStyle = {
@@ -229,8 +228,7 @@ export default function Design() {
         >
           {isVideo ? (
             <video
-              key={currentMedia}
-              src={currentMedia}
+              key={mp4Media}
               autoPlay
               muted
               loop
@@ -239,11 +237,14 @@ export default function Design() {
               className={`max-w-full max-h-[80vh] lg:max-h-[92vh] max-lg:max-h-[72vh] object-contain transition-opacity duration-500 ease-in-out ${
                 fadeOut ? "opacity-0" : "opacity-100"
               }`}
-            />
+            >
+              <source src={mp4Media} type="video/mp4" />
+              <source src={movMedia} type="video/quicktime" />
+            </video>
           ) : (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
-              src={currentMedia}
+              src={imageMedia}
               alt={`${currentProject.title} - Image ${currentNumber}`}
               className={`max-w-full max-h-[80vh] lg:max-h-[92vh] max-lg:max-h-[50vh] object-contain transition-opacity duration-500 ease-in-out ${
                 fadeOut ? "opacity-0" : "opacity-100"
