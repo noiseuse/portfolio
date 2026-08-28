@@ -179,6 +179,7 @@ export default function Design() {
   const currentMedia = isVideo
     ? `/design/${currentProject.folder}/${currentNumber}.mov`
     : `/design/${currentProject.folder}/${currentNumber}.png` ||
+      `/design/${currentProject.folder}/${currentNumber}.mp4` ||
       `/design/${currentProject.folder}/${currentNumber}.jpg` ||
       `/design/${currentProject.folder}/${currentNumber}.webp`;
 
