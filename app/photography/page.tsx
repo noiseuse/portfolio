@@ -6,7 +6,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 const projects = [
   { title: "TRADE WINDS", year: 2026, count: 20, folder: "tradewinds" },
   { title: "THE COLOUR OF THE HEAVY HEMLOCKS", year: 2025, count: 17, folder: "hemlocks" },
-  { title: "TRACTION", year: 2025, count: 19, folder: "traction" },
+  { title: "TRACTION", year: 2025, count: 20, folder: "traction" },
   { title: "LEARNING TO RUN", year: 2024, count: 17, folder: "run" },
 ];
 
