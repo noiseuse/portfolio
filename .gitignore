@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video assets (over GitHub's 100MB limit)
+public/design/peel/2.mov
+public/design/Petal/5.mov
