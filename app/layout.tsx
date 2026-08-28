@@ -6,9 +6,7 @@ export const metadata: Metadata = {
   title: "Lore Schwartz",
   description: "Design and photography portfolio of Lore Schwartz, a Montréal based filmmaker, designer and software engineer.",
   icons: {
-    icon: [
-      { url: "/favicon.png?v=2", type: "image/png", sizes: "32x32" },
-    ],
+    icon: "/favicon.ico",
   },
 };
 
